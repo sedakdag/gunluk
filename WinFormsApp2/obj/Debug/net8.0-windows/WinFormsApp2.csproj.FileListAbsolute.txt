@@ -95,3 +95,5 @@ C:\Users\35sed\Source\Repos\gunluk\WinFormsApp2\obj\Debug\net8.0-windows\refint\
 C:\Users\35sed\Source\Repos\gunluk\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.pdb
 C:\Users\35sed\Source\Repos\gunluk\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.genruntimeconfig.cache
 C:\Users\35sed\Source\Repos\gunluk\WinFormsApp2\obj\Debug\net8.0-windows\ref\WinFormsApp2.dll
+C:\Users\35sed\Source\Repos\gunluk\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.UykuGecmis.resources
+C:\Users\35sed\Source\Repos\gunluk\WinFormsApp2\obj\Debug\net8.0-windows\WinFormsApp2.IlacTakibi.resources
