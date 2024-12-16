@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace WinFormsApp2
 {
@@ -47,11 +48,12 @@ namespace WinFormsApp2
 
             if (checkMutlu.Checked)
             {
-                ruhHali = "Mutlu";
+                ruhHali = "Mutlu";               
             }
             else if (checkNormal.Checked)
             {
                 ruhHali = "Normal";
+                
             }
             else if (checkUykulu.Checked)
             {
@@ -74,6 +76,14 @@ namespace WinFormsApp2
                 ruhHali = "Üzgün";
             }
 
+            foreach (var checkBox in new[] { checkMutlu, checkUzgun, checkSaskin, checkKizgin })
+            {
+                if (checkBox.Text != ruhHali)
+                {
+                    checkBox.Checked = false;
+                }
+            }
+
             if ((string.IsNullOrEmpty(gunlukAktivite)) || (string.IsNullOrEmpty(ruhHali)))
             {
                 MessageBox.Show("Tüm alanları doldurmadınız veya bir ruh hali seçmediniz.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning); //Kullanıcı günlük girdisini doldurmazsa veya ruh halini seçmezse uyarı
@@ -91,13 +101,6 @@ namespace WinFormsApp2
             //Bir sonraki girdi için alanları sıfırlama
 
             gunlukGirdi.Clear();
-            foreach (Control control in this.Controls)
-            {
-                if (control is CheckBox checkBox)
-                {
-                    checkBox.Checked = false;
-                }
-            }
 
 
         }
