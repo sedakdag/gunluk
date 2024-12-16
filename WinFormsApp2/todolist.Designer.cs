@@ -1,4 +1,5 @@
-﻿namespace WinFormsApp2
+﻿
+namespace WinFormsApp2
 {
     partial class todolist
     {
@@ -30,10 +31,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(todolist));
             label1 = new Label();
-            groupBox1 = new GroupBox();
-            groupBox2 = new GroupBox();
             pictureBox1 = new PictureBox();
-            groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -48,36 +46,16 @@
             label1.TabIndex = 0;
             label1.Text = "Merhaba , listene bir göz at..";
             // 
-            // groupBox1
-            // 
-            groupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            groupBox1.Location = new Point(30, 86);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(216, 304);
-            groupBox1.TabIndex = 2;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "YAPILACAKLAR";
-            // 
-            // groupBox2
-            // 
-            groupBox2.Controls.Add(pictureBox1);
-            groupBox2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            groupBox2.Location = new Point(269, 86);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(216, 304);
-            groupBox2.TabIndex = 2;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "TAMAMLANANLAR";
-            // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(-109, -30);
+            pictureBox1.Location = new Point(341, 1);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(155, 157);
+            pictureBox1.Size = new Size(78, 79);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
+            pictureBox1.Visible = false;
             pictureBox1.Click += pictureBox1_Click;
             // 
             // todolist
@@ -85,25 +63,31 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LavenderBlush;
-            ClientSize = new Size(559, 450);
-            Controls.Add(groupBox2);
-            Controls.Add(groupBox1);
+            ClientSize = new Size(559, 494);
+            Controls.Add(pictureBox1);
             Controls.Add(label1);
             Name = "todolist";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "todolist";
             Load += todolist_Load;
-            groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
+        private void todolist_Load(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
         #endregion
 
         private Label label1;
-        private GroupBox groupBox1;
-        private GroupBox groupBox2;
         private PictureBox pictureBox1;
     }
 }

@@ -55,7 +55,7 @@
             // 
             labelUzgun.AutoSize = true;
             labelUzgun.Font = new Font("Franklin Gothic Medium", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelUzgun.Location = new Point(485, 122);
+            labelUzgun.Location = new Point(423, 113);
             labelUzgun.Margin = new Padding(2, 0, 2, 0);
             labelUzgun.Name = "labelUzgun";
             labelUzgun.Size = new Size(50, 18);
@@ -66,7 +66,7 @@
             // 
             labelKizgin.AutoSize = true;
             labelKizgin.Font = new Font("Franklin Gothic Medium", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelKizgin.Location = new Point(362, 122);
+            labelKizgin.Location = new Point(300, 113);
             labelKizgin.Margin = new Padding(2, 0, 2, 0);
             labelKizgin.Name = "labelKizgin";
             labelKizgin.Size = new Size(50, 18);
@@ -77,7 +77,7 @@
             // 
             labelSaskin.AutoSize = true;
             labelSaskin.Font = new Font("Franklin Gothic Medium", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelSaskin.Location = new Point(235, 123);
+            labelSaskin.Location = new Point(173, 114);
             labelSaskin.Margin = new Padding(2, 0, 2, 0);
             labelSaskin.Name = "labelSaskin";
             labelSaskin.Size = new Size(54, 18);
@@ -88,7 +88,7 @@
             // 
             labelMutlu.AutoSize = true;
             labelMutlu.Font = new Font("Franklin Gothic Medium", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelMutlu.Location = new Point(109, 123);
+            labelMutlu.Location = new Point(47, 114);
             labelMutlu.Margin = new Padding(2, 0, 2, 0);
             labelMutlu.Name = "labelMutlu";
             labelMutlu.Size = new Size(47, 18);
@@ -98,7 +98,7 @@
             // pictureUzgun
             // 
             pictureUzgun.Image = (Image)resources.GetObject("pictureUzgun.Image");
-            pictureUzgun.Location = new Point(482, 71);
+            pictureUzgun.Location = new Point(420, 62);
             pictureUzgun.Margin = new Padding(2);
             pictureUzgun.Name = "pictureUzgun";
             pictureUzgun.Size = new Size(53, 49);
@@ -111,7 +111,7 @@
             // 
             checkUzgun.AutoSize = true;
             checkUzgun.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkUzgun.Location = new Point(501, 142);
+            checkUzgun.Location = new Point(439, 133);
             checkUzgun.Margin = new Padding(2);
             checkUzgun.Name = "checkUzgun";
             checkUzgun.Size = new Size(15, 14);
@@ -121,7 +121,7 @@
             // pictureKizgin
             // 
             pictureKizgin.Image = (Image)resources.GetObject("pictureKizgin.Image");
-            pictureKizgin.Location = new Point(359, 70);
+            pictureKizgin.Location = new Point(297, 61);
             pictureKizgin.Margin = new Padding(2);
             pictureKizgin.Name = "pictureKizgin";
             pictureKizgin.Size = new Size(53, 50);
@@ -133,7 +133,7 @@
             // 
             checkKizgin.AutoSize = true;
             checkKizgin.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkKizgin.Location = new Point(378, 141);
+            checkKizgin.Location = new Point(316, 132);
             checkKizgin.Margin = new Padding(2);
             checkKizgin.Name = "checkKizgin";
             checkKizgin.Size = new Size(15, 14);
@@ -143,7 +143,7 @@
             // pictureSaskin
             // 
             pictureSaskin.Image = (Image)resources.GetObject("pictureSaskin.Image");
-            pictureSaskin.Location = new Point(235, 70);
+            pictureSaskin.Location = new Point(173, 61);
             pictureSaskin.Margin = new Padding(2);
             pictureSaskin.Name = "pictureSaskin";
             pictureSaskin.Size = new Size(53, 50);
@@ -155,7 +155,7 @@
             // 
             checkSaskin.AutoSize = true;
             checkSaskin.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkSaskin.Location = new Point(252, 142);
+            checkSaskin.Location = new Point(190, 133);
             checkSaskin.Margin = new Padding(2);
             checkSaskin.Name = "checkSaskin";
             checkSaskin.Size = new Size(15, 14);
@@ -165,7 +165,7 @@
             // pictureMutlu
             // 
             pictureMutlu.Image = (Image)resources.GetObject("pictureMutlu.Image");
-            pictureMutlu.Location = new Point(109, 71);
+            pictureMutlu.Location = new Point(47, 62);
             pictureMutlu.Margin = new Padding(2);
             pictureMutlu.Name = "pictureMutlu";
             pictureMutlu.Size = new Size(53, 50);
@@ -177,7 +177,7 @@
             // 
             checkMutlu.AutoSize = true;
             checkMutlu.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkMutlu.Location = new Point(125, 142);
+            checkMutlu.Location = new Point(63, 133);
             checkMutlu.Margin = new Padding(2);
             checkMutlu.Name = "checkMutlu";
             checkMutlu.Size = new Size(15, 14);
@@ -188,7 +188,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Franklin Gothic Medium", 16F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label1.Location = new Point(185, 27);
+            label1.Location = new Point(123, 18);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(274, 28);
@@ -199,7 +199,7 @@
             // 
             buttonSozuGetir.BackColor = Color.FromArgb(255, 128, 128);
             buttonSozuGetir.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            buttonSozuGetir.Location = new Point(252, 178);
+            buttonSozuGetir.Location = new Point(190, 169);
             buttonSozuGetir.Margin = new Padding(2);
             buttonSozuGetir.Name = "buttonSozuGetir";
             buttonSozuGetir.Size = new Size(141, 37);
@@ -223,7 +223,7 @@
             // 
             labelYazar.AutoSize = true;
             labelYazar.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            labelYazar.Location = new Point(262, 228);
+            labelYazar.Location = new Point(200, 219);
             labelYazar.Name = "labelYazar";
             labelYazar.Size = new Size(0, 21);
             labelYazar.TabIndex = 53;
@@ -233,7 +233,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 192, 192);
-            ClientSize = new Size(683, 403);
+            ClientSize = new Size(565, 391);
             Controls.Add(labelYazar);
             Controls.Add(labelSoz);
             Controls.Add(buttonSozuGetir);
@@ -252,6 +252,7 @@
             Controls.Add(checkMutlu);
             Margin = new Padding(2);
             Name = "GununSozu";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Günün Sözü";
             Load += GununSozu_Load;
             ((System.ComponentModel.ISupportInitialize)pictureUzgun).EndInit();

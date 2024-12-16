@@ -38,7 +38,7 @@
     <Compile Update="UykuTakibi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="YemekTakibi.cs">
+    <Compile Update="yemektakip.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

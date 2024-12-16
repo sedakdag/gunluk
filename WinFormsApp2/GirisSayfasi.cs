@@ -54,8 +54,8 @@ namespace WinFormsApp2
 
         private void buttonYemekTakibi_Click(object sender, EventArgs e)
         {
-            YemekTakibi yemekTakibi = new YemekTakibi();
-            yemekTakibi.Show();
+            yemektakip _yemekTakibi = new yemektakip();
+            _yemekTakibi.Show();
             this.Hide();
         }
 
@@ -68,8 +68,8 @@ namespace WinFormsApp2
 
         private void buttonFitnessveEgzersizTakibi_Click(object sender, EventArgs e)
         {
-            FitnessEgzersiz fitnessEgzersiz = new FitnessEgzersiz();
-            fitnessEgzersiz.Show();
+            FitnessEgzersiz _fitnessEgzersiz = new FitnessEgzersiz();
+            _fitnessEgzersiz.Show();
             this.Hide();
         }
 
@@ -78,6 +78,11 @@ namespace WinFormsApp2
             ProfiliDuzenle profiliDuzenle = new ProfiliDuzenle();
             profiliDuzenle.Show();
             this.Hide();
+        }
+
+        private void GirisSayfasi_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
