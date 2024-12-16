@@ -13,9 +13,12 @@ namespace WinFormsApp2
 {
     public partial class GunlukGirdiler : Form
     {
-        public GunlukGirdiler()
+        private GirisSayfasi previousPage; // Önceki formun referansı
+
+        public GunlukGirdiler(GirisSayfasi prevPage)
         {
             InitializeComponent();
+            previousPage = prevPage; // Referansı saklar
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -48,12 +51,12 @@ namespace WinFormsApp2
 
             if (checkMutlu.Checked)
             {
-                ruhHali = "Mutlu";               
+                ruhHali = "Mutlu";
             }
             else if (checkNormal.Checked)
             {
                 ruhHali = "Normal";
-                
+
             }
             else if (checkUykulu.Checked)
             {
@@ -113,6 +116,12 @@ namespace WinFormsApp2
         private void checkKizgin_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonGeri_Click(object sender, EventArgs e)
+        {
+            previousPage.Show(); // Önceki formu gösterir
+            this.Close(); // Mevcut formu kapatır
         }
     }
 }

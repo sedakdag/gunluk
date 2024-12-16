@@ -37,8 +37,8 @@
             buttonGununSarkisi = new Button();
             buttonYemekTakibi = new Button();
             buttonUykuTakibi = new Button();
-            buttonFitnessveEgzersizTakibi = new Button();
-            buttonProfiliDuzenle = new Button();
+            buttonIlacTakibi = new Button();
+            buttonFitness = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -148,38 +148,38 @@
             buttonUykuTakibi.UseVisualStyleBackColor = true;
             buttonUykuTakibi.Click += buttonUykuTakibi_Click;
             // 
-            // buttonFitnessveEgzersizTakibi
+            // buttonIlacTakibi
             // 
-            buttonFitnessveEgzersizTakibi.Font = new Font("Calibri", 16F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            buttonFitnessveEgzersizTakibi.Location = new Point(166, 538);
-            buttonFitnessveEgzersizTakibi.Margin = new Padding(2);
-            buttonFitnessveEgzersizTakibi.Name = "buttonFitnessveEgzersizTakibi";
-            buttonFitnessveEgzersizTakibi.Size = new Size(270, 52);
-            buttonFitnessveEgzersizTakibi.TabIndex = 8;
-            buttonFitnessveEgzersizTakibi.Text = "Fitness ve Egzersiz Takibi";
-            buttonFitnessveEgzersizTakibi.UseVisualStyleBackColor = true;
-            buttonFitnessveEgzersizTakibi.Click += buttonFitnessveEgzersizTakibi_Click;
+            buttonIlacTakibi.Font = new Font("Calibri", 16F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            buttonIlacTakibi.Location = new Point(166, 601);
+            buttonIlacTakibi.Margin = new Padding(2);
+            buttonIlacTakibi.Name = "buttonIlacTakibi";
+            buttonIlacTakibi.Size = new Size(270, 52);
+            buttonIlacTakibi.TabIndex = 9;
+            buttonIlacTakibi.Text = "İlaç Takibi";
+            buttonIlacTakibi.UseVisualStyleBackColor = true;
+            buttonIlacTakibi.Click += buttonProfiliDuzenle_Click;
             // 
-            // buttonProfiliDuzenle
+            // buttonFitness
             // 
-            buttonProfiliDuzenle.Font = new Font("Calibri", 16F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            buttonProfiliDuzenle.Location = new Point(166, 601);
-            buttonProfiliDuzenle.Margin = new Padding(2);
-            buttonProfiliDuzenle.Name = "buttonProfiliDuzenle";
-            buttonProfiliDuzenle.Size = new Size(270, 52);
-            buttonProfiliDuzenle.TabIndex = 9;
-            buttonProfiliDuzenle.Text = "Profili Düzenle";
-            buttonProfiliDuzenle.UseVisualStyleBackColor = true;
-            buttonProfiliDuzenle.Click += buttonProfiliDuzenle_Click;
+            buttonFitness.Font = new Font("Calibri", 16F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            buttonFitness.Location = new Point(166, 536);
+            buttonFitness.Margin = new Padding(2);
+            buttonFitness.Name = "buttonFitness";
+            buttonFitness.Size = new Size(270, 52);
+            buttonFitness.TabIndex = 10;
+            buttonFitness.Text = "Fitness ve Egzersiz Takibi";
+            buttonFitness.UseVisualStyleBackColor = true;
+            buttonFitness.Click += buttonFitness_Click;
             // 
             // GirisSayfasi
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 192, 192);
-            ClientSize = new Size(613, 717);
-            Controls.Add(buttonProfiliDuzenle);
-            Controls.Add(buttonFitnessveEgzersizTakibi);
+            ClientSize = new Size(613, 692);
+            Controls.Add(buttonFitness);
+            Controls.Add(buttonIlacTakibi);
             Controls.Add(buttonUykuTakibi);
             Controls.Add(buttonYemekTakibi);
             Controls.Add(buttonGununSarkisi);
@@ -209,7 +209,7 @@
         private Button buttonGununSarkisi;
         private Button buttonYemekTakibi;
         private Button buttonUykuTakibi;
-        private Button buttonFitnessveEgzersizTakibi;
-        private Button buttonProfiliDuzenle;
+        private Button buttonIlacTakibi;
+        private Button buttonFitness;
     }
 }

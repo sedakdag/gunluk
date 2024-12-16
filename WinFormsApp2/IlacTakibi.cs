@@ -36,41 +36,73 @@ namespace WinFormsApp2
         {
             string ilacIsmi = textBoxIlacIsmi.Text;
             DateTime alisTarihi = dtpIlac.Value;
-            string alisZamani = GetVakit();
-            string alisSekli = GetAlisSekli();
+            string alisZamaniSekli = GetSecilenZaman();
 
-            if (!string.IsNullOrEmpty(ilacIsmi) && alisTarihi != null) { 
-                ListViewItem item = new ListViewItem(new[] {ilacIsmi, alisTarihi.ToShortDateString(), alisZamani, alisSekli});
+            if (!string.IsNullOrEmpty(ilacIsmi) && alisTarihi != null)
+            {
+                // ListViewItem oluştur
+                ListViewItem item = new ListViewItem(ilacIsmi); // Ana sütun: İlaç İsmi
+                item.SubItems.Add(alisTarihi.ToShortDateString()); // Alt sütun: Tarih
+                item.SubItems.Add(alisZamaniSekli); // Alt sütun: Zaman ve Şekil
+
                 listViewIlaclar.Items.Add(item);
 
                 //Sonraki ilaç için textbox'u temizle
                 textBoxIlacIsmi.Clear();
                 dtpIlac.Value = DateTime.Now;
 
+                // RadioButton seçimlerini temizle
+                radioButtonAc.Checked = false;
+                radioButtonTok.Checked = false;
+                radioButtonSabah.Checked = false;
+                radioButtonAksam.Checked = false;
+
+            }
+            else
+            {
+                MessageBox.Show("Boş alan bırakmayın!", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
-        private string GetVakit()
+        private string GetSecilenZaman()
         {
-            if (radioButtonSabah.Checked) return "Sabah";
-            if (radioButtonOgle.Checked) return "Öğle";
-            if (radioButtonAksam.Checked) return "Akşam";
-            return string.Empty;
-        }
+            string acTokSecimi = "";
+            string sabahAksamSecimi = "";
 
-        private string GetAlisSekli()
-        {
-            if (radioButtonAc.Checked) return "Aç";
-            if (radioButtonTok.Checked) return "Tok";
-            return string.Empty;
+            // Aç/Tok seçimini kontrol eder
+            if (radioButtonAc.Checked)
+            {
+                acTokSecimi = "Aç";
+            }
+            else if (radioButtonTok.Checked)
+            {
+                acTokSecimi = "Tok";
+            }
+
+            // Sabah/Akşam seçimini kontrol eder
+            if (radioButtonSabah.Checked)
+            {
+                sabahAksamSecimi = "Sabah";
+            }
+            else if (radioButtonAksam.Checked)
+            {
+                sabahAksamSecimi = "Akşam";
+            }
+           
+            // İki gruptan seçim yapılmışsa birleştirir
+            if (!string.IsNullOrEmpty(acTokSecimi) && !string.IsNullOrEmpty(sabahAksamSecimi))
+            {
+                return $"{sabahAksamSecimi} - {acTokSecimi}";
+            }
+            else
+            {
+                // Eğer seçim eksikse
+                return "Eksik seçim!";
+            }
+
         }
 
         private void radioButtonSabah_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButtonOgle_CheckedChanged(object sender, EventArgs e)
         {
 
         }
@@ -80,7 +112,22 @@ namespace WinFormsApp2
 
         }
 
+        private void radioButtonAc_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void radioButtonTok_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBoxSabahAksam_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBoxAcTok_Enter(object sender, EventArgs e)
         {
 
         }

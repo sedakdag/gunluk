@@ -38,15 +38,21 @@ namespace WinFormsApp2
             labelAcTok = new Label();
             label1 = new Label();
             radioButtonSabah = new RadioButton();
-            radioButtonOgle = new RadioButton();
             radioButtonAksam = new RadioButton();
             buttonKayt = new Button();
             listViewIlaclar = new ListView();
+            IlacIsmi = new ColumnHeader();
+            Tarih = new ColumnHeader();
+            ZamanTokluk = new ColumnHeader();
             panel1 = new Panel();
-            pictureBox1 = new PictureBox();
             label2 = new Label();
+            pictureBox1 = new PictureBox();
+            groupBoxAcTok = new GroupBox();
+            groupBoxSabahAksam = new GroupBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            groupBoxAcTok.SuspendLayout();
+            groupBoxSabahAksam.SuspendLayout();
             SuspendLayout();
             // 
             // textBoxIlacIsmi
@@ -81,7 +87,7 @@ namespace WinFormsApp2
             // 
             radioButtonAc.AutoSize = true;
             radioButtonAc.Font = new Font("Candara", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            radioButtonAc.Location = new Point(137, 152);
+            radioButtonAc.Location = new Point(6, 12);
             radioButtonAc.Name = "radioButtonAc";
             radioButtonAc.Size = new Size(44, 23);
             radioButtonAc.TabIndex = 3;
@@ -94,7 +100,7 @@ namespace WinFormsApp2
             // 
             radioButtonTok.AutoSize = true;
             radioButtonTok.Font = new Font("Candara", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            radioButtonTok.Location = new Point(187, 152);
+            radioButtonTok.Location = new Point(6, 35);
             radioButtonTok.Name = "radioButtonTok";
             radioButtonTok.Size = new Size(51, 23);
             radioButtonTok.TabIndex = 4;
@@ -127,7 +133,7 @@ namespace WinFormsApp2
             // 
             radioButtonSabah.AutoSize = true;
             radioButtonSabah.Font = new Font("Candara", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            radioButtonSabah.Location = new Point(254, 198);
+            radioButtonSabah.Location = new Point(6, 32);
             radioButtonSabah.Name = "radioButtonSabah";
             radioButtonSabah.Size = new Size(69, 23);
             radioButtonSabah.TabIndex = 7;
@@ -136,24 +142,11 @@ namespace WinFormsApp2
             radioButtonSabah.UseVisualStyleBackColor = true;
             radioButtonSabah.CheckedChanged += radioButtonSabah_CheckedChanged;
             // 
-            // radioButtonOgle
-            // 
-            radioButtonOgle.AutoSize = true;
-            radioButtonOgle.Font = new Font("Candara", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            radioButtonOgle.Location = new Point(329, 198);
-            radioButtonOgle.Name = "radioButtonOgle";
-            radioButtonOgle.Size = new Size(59, 23);
-            radioButtonOgle.TabIndex = 8;
-            radioButtonOgle.TabStop = true;
-            radioButtonOgle.Text = "Öğle";
-            radioButtonOgle.UseVisualStyleBackColor = true;
-            radioButtonOgle.CheckedChanged += radioButtonOgle_CheckedChanged;
-            // 
             // radioButtonAksam
             // 
             radioButtonAksam.AutoSize = true;
             radioButtonAksam.Font = new Font("Candara", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            radioButtonAksam.Location = new Point(394, 198);
+            radioButtonAksam.Location = new Point(73, 32);
             radioButtonAksam.Name = "radioButtonAksam";
             radioButtonAksam.Size = new Size(73, 23);
             radioButtonAksam.TabIndex = 9;
@@ -166,7 +159,7 @@ namespace WinFormsApp2
             // 
             buttonKayt.BackColor = Color.FromArgb(255, 128, 128);
             buttonKayt.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            buttonKayt.Location = new Point(198, 234);
+            buttonKayt.Location = new Point(180, 231);
             buttonKayt.Name = "buttonKayt";
             buttonKayt.Size = new Size(115, 40);
             buttonKayt.TabIndex = 10;
@@ -176,11 +169,28 @@ namespace WinFormsApp2
             // 
             // listViewIlaclar
             // 
-            listViewIlaclar.Location = new Point(45, 286);
+            listViewIlaclar.Columns.AddRange(new ColumnHeader[] { IlacIsmi, Tarih, ZamanTokluk });
+            listViewIlaclar.Location = new Point(30, 286);
             listViewIlaclar.Name = "listViewIlaclar";
-            listViewIlaclar.Size = new Size(422, 152);
+            listViewIlaclar.Size = new Size(456, 152);
             listViewIlaclar.TabIndex = 11;
             listViewIlaclar.UseCompatibleStateImageBehavior = false;
+            listViewIlaclar.View = View.Details;
+            // 
+            // IlacIsmi
+            // 
+            IlacIsmi.Text = "İlaç İsmi";
+            IlacIsmi.Width = 150;
+            // 
+            // Tarih
+            // 
+            Tarih.Text = "Tarih";
+            Tarih.Width = 150;
+            // 
+            // ZamanTokluk
+            // 
+            ZamanTokluk.Text = "Zaman/Tokluk";
+            ZamanTokluk.Width = 150;
             // 
             // panel1
             // 
@@ -190,16 +200,6 @@ namespace WinFormsApp2
             panel1.Name = "panel1";
             panel1.Size = new Size(534, 64);
             panel1.TabIndex = 12;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(394, 102);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(73, 69);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
             // 
             // label2
             // 
@@ -212,23 +212,52 @@ namespace WinFormsApp2
             label2.TabIndex = 0;
             label2.Text = "İlaçlarım";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(413, 102);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(73, 69);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
+            // groupBoxAcTok
+            // 
+            groupBoxAcTok.Controls.Add(radioButtonAc);
+            groupBoxAcTok.Controls.Add(radioButtonTok);
+            groupBoxAcTok.Location = new Point(127, 128);
+            groupBoxAcTok.Name = "groupBoxAcTok";
+            groupBoxAcTok.Size = new Size(100, 65);
+            groupBoxAcTok.TabIndex = 13;
+            groupBoxAcTok.TabStop = false;
+            groupBoxAcTok.Enter += groupBoxAcTok_Enter;
+            // 
+            // groupBoxSabahAksam
+            // 
+            groupBoxSabahAksam.Controls.Add(radioButtonAksam);
+            groupBoxSabahAksam.Controls.Add(radioButtonSabah);
+            groupBoxSabahAksam.Location = new Point(242, 165);
+            groupBoxSabahAksam.Name = "groupBoxSabahAksam";
+            groupBoxSabahAksam.Size = new Size(152, 58);
+            groupBoxSabahAksam.TabIndex = 14;
+            groupBoxSabahAksam.TabStop = false;
+            groupBoxSabahAksam.Enter += groupBoxSabahAksam_Enter;
+            // 
             // IlacTakibi
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 192, 192);
-            ClientSize = new Size(528, 450);
+            ClientSize = new Size(516, 450);
+            Controls.Add(groupBoxSabahAksam);
+            Controls.Add(groupBoxAcTok);
             Controls.Add(pictureBox1);
             Controls.Add(panel1);
             Controls.Add(listViewIlaclar);
             Controls.Add(buttonKayt);
-            Controls.Add(radioButtonAksam);
-            Controls.Add(radioButtonOgle);
-            Controls.Add(radioButtonSabah);
             Controls.Add(label1);
             Controls.Add(labelAcTok);
-            Controls.Add(radioButtonTok);
-            Controls.Add(radioButtonAc);
             Controls.Add(labelIlacIsmi);
             Controls.Add(dtpIlac);
             Controls.Add(textBoxIlacIsmi);
@@ -237,13 +266,17 @@ namespace WinFormsApp2
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            groupBoxAcTok.ResumeLayout(false);
+            groupBoxAcTok.PerformLayout();
+            groupBoxSabahAksam.ResumeLayout(false);
+            groupBoxSabahAksam.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            
         }
 
         #endregion
@@ -256,12 +289,16 @@ namespace WinFormsApp2
         private Label labelAcTok;
         private Label label1;
         private RadioButton radioButtonSabah;
-        private RadioButton radioButtonOgle;
         private RadioButton radioButtonAksam;
         private Button buttonKayt;
         private ListView listViewIlaclar;
         private Panel panel1;
         private Label label2;
         private PictureBox pictureBox1;
+        private GroupBox groupBoxAcTok;
+        private GroupBox groupBoxSabahAksam;
+        private ColumnHeader IlacIsmi;
+        private ColumnHeader Tarih;
+        private ColumnHeader ZamanTokluk;
     }
 }

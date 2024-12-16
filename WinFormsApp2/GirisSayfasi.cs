@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FitnessEgzersizApp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,7 @@ namespace WinFormsApp2
 
         private void buttonGunlukGirdileri_Click(object sender, EventArgs e)
         {
-            GunlukGirdiler gunlukGirdiler = new GunlukGirdiler();
+            GunlukGirdiler gunlukGirdiler = new GunlukGirdiler(this);
             gunlukGirdiler.Show();
             this.Hide();
         }
@@ -66,23 +67,23 @@ namespace WinFormsApp2
             this.Hide();
         }
 
-        private void buttonFitnessveEgzersizTakibi_Click(object sender, EventArgs e)
-        {
-            FitnessEgzersiz _fitnessEgzersiz = new FitnessEgzersiz();
-            _fitnessEgzersiz.Show();
-            this.Hide();
-        }
-
         private void buttonProfiliDuzenle_Click(object sender, EventArgs e)
         {
-            ProfiliDuzenle profiliDuzenle = new ProfiliDuzenle();
-            profiliDuzenle.Show();
+            IlacTakibi ilacTakibi = new IlacTakibi();
+            ilacTakibi.Show();
             this.Hide();
         }
 
         private void GirisSayfasi_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonFitness_Click(object sender, EventArgs e)
+        {
+            FitnessForm form = new FitnessForm();
+            form.Show();
+            this.Hide();
         }
     }
 }

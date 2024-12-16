@@ -55,6 +55,7 @@
             labelKizgin = new Label();
             labelUzgun = new Label();
             panel_gunlukGirdi = new Panel();
+            buttonGeri = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureMutlu).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureNormal).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureUykulu).BeginInit();
@@ -347,6 +348,7 @@
             // panel_gunlukGirdi
             // 
             panel_gunlukGirdi.BackColor = Color.FromArgb(255, 192, 192);
+            panel_gunlukGirdi.Controls.Add(buttonGeri);
             panel_gunlukGirdi.Controls.Add(labelUzgun);
             panel_gunlukGirdi.Controls.Add(labelKizgin);
             panel_gunlukGirdi.Controls.Add(labelSaskin);
@@ -378,6 +380,17 @@
             panel_gunlukGirdi.Size = new Size(693, 379);
             panel_gunlukGirdi.TabIndex = 3;
             panel_gunlukGirdi.Paint += panel1_Paint;
+            // 
+            // buttonGeri
+            // 
+            buttonGeri.BackColor = Color.Silver;
+            buttonGeri.Location = new Point(6, 9);
+            buttonGeri.Name = "buttonGeri";
+            buttonGeri.Size = new Size(75, 23);
+            buttonGeri.TabIndex = 29;
+            buttonGeri.Text = "Geri";
+            buttonGeri.UseVisualStyleBackColor = false;
+            buttonGeri.Click += buttonGeri_Click;
             // 
             // GunlukGirdiler
             // 
@@ -430,5 +443,6 @@
         private Label labelKizgin;
         private Label labelUzgun;
         private Panel panel_gunlukGirdi;
+        private Button buttonGeri;
     }
 }
