@@ -14,9 +14,16 @@ namespace WinFormsApp2
     public partial class GununSozu : Form
     {
         private string ruhHali = "Mutlu"; //Varsayilan Mod
+        
         public GununSozu()
         {
             InitializeComponent();
+
+            // CheckBox'lara CheckedChanged olaylarını bağlama
+            checkMutlu.CheckedChanged += CheckBox_CheckedChanged;
+            checkUzgun.CheckedChanged += CheckBox_CheckedChanged;
+            checkSaskin.CheckedChanged += CheckBox_CheckedChanged;
+            checkKizgin.CheckedChanged += CheckBox_CheckedChanged;
         }
 
         private async void GununSozu_Load(object sender, EventArgs e)
@@ -128,5 +135,20 @@ namespace WinFormsApp2
         {
 
         }
+        private void CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            // Seçili olan CheckBox hariç diğerlerini temizler
+            if (sender is CheckBox selectedCheckBox && selectedCheckBox.Checked)
+            {
+                foreach (var control in this.Controls)
+                {
+                    if (control is CheckBox checkBox && checkBox != selectedCheckBox)
+                    {
+                        checkBox.Checked = false;
+                    }
+                }
+            }
+        }
+
     }
 }
