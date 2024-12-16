@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Gecmis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+<<<<<<< HEAD
+    <Compile Update="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Gecmis.cs">
+=======
+    <Compile Update="GirisSayfasi.cs">
+>>>>>>> origin/seda
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GunlukGirdiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GununSozu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
